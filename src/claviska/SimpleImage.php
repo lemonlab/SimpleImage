@@ -240,7 +240,7 @@ class SimpleImage {
       break;
     case 'image/png':
       imagesavealpha($this->image, true);
-      imagepng($this->image, null, round(9 * $quality / 100));
+      imagepng($this->image, null, 1); // Force 1 because it's faster
       break;
     case 'image/webp':
       // Not all versions of PHP will have webp support enabled
